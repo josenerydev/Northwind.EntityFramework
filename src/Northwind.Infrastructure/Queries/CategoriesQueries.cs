@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-using Northwind.Application.Production;
-using Northwind.Application.Queries;
+using Northwind.Application.Production.Categories;
 
 namespace Northwind.Infrastructure.Queries
 {

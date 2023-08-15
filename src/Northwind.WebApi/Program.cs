@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-
-using Northwind.Application.Queries;
-using Northwind.Application.Services;
+using Northwind.Application.HR.Employees;
+using Northwind.Application.Production.Categories;
 using Northwind.Domain.HR;
 using Northwind.Domain.Production;
 using Northwind.Infrastructure;

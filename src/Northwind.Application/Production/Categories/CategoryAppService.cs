@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
 
-using Northwind.Application.Production;
 using Northwind.Domain.Production;
 
-namespace Northwind.Application.Services
+namespace Northwind.Application.Production.Categories
 {
     public class CategoryAppService : ICategoryAppService
     {

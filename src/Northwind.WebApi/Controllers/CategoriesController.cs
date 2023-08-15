@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-using Northwind.Application.Production;
-using Northwind.Application.Queries;
-using Northwind.Application.Services;
+using Northwind.Application.Production.Categories;
 
 namespace Northwind.WebApi.Controllers
 {

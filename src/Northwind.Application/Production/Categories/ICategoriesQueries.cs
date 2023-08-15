@@ -1,6 +1,4 @@
-﻿using Northwind.Application.Production;
-
-namespace Northwind.Application.Queries
+﻿namespace Northwind.Application.Production.Categories
 {
     public interface ICategoriesQueries
     {

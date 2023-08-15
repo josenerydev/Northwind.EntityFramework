@@ -2,7 +2,7 @@
 
 using Northwind.Domain.Production;
 
-namespace Northwind.Application.Production
+namespace Northwind.Application.Production.Categories
 {
     public class CategoryMappingProfile : Profile
     {

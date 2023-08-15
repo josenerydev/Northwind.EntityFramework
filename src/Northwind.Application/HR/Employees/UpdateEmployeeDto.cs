@@ -1,4 +1,4 @@
-﻿namespace Northwind.Application.HR
+﻿namespace Northwind.Application.HR.Employees
 {
     public class UpdateEmployeeDto
     {

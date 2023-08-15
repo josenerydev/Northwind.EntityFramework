@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
-using Northwind.Application.HR;
-using Northwind.Application.Queries;
-using Northwind.Application.Services;
+using Northwind.Application.HR.Employees;
 
 namespace Northwind.WebApi.Controllers
 {

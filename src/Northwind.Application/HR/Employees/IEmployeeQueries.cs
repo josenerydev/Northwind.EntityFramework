@@ -1,6 +1,4 @@
-﻿using Northwind.Application.HR;
-
-namespace Northwind.Application.Queries
+﻿namespace Northwind.Application.HR.Employees
 {
     public interface IEmployeeQueries
     {

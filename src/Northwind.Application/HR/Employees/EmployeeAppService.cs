@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
 
-using Northwind.Application.HR;
 using Northwind.Domain.HR;
 
-namespace Northwind.Application.Services
+namespace Northwind.Application.HR.Employees
 {
     public class EmployeeAppService : IEmployeeAppService
     {

@@ -1,6 +1,4 @@
-﻿using Northwind.Application.HR;
-
-namespace Northwind.Application.Services
+﻿namespace Northwind.Application.HR.Employees
 {
     public interface IEmployeeAppService
     {

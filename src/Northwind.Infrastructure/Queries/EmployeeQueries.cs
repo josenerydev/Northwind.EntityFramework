@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
-using Northwind.Application.HR;
-using Northwind.Application.Queries;
+using Northwind.Application.HR.Employees;
 
 namespace Northwind.Infrastructure.Queries
 {

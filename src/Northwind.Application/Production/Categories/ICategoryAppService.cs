@@ -1,6 +1,4 @@
-﻿using Northwind.Application.Production;
-
-namespace Northwind.Application.Services
+﻿namespace Northwind.Application.Production.Categories
 {
     public interface ICategoryAppService
     {
