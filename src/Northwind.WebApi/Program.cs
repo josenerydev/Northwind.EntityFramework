@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 using Northwind.Application.Queries;
 using Northwind.Application.Services;
+using Northwind.Domain.HR;
 using Northwind.Domain.Production;
 using Northwind.Infrastructure;
 using Northwind.Infrastructure.Queries;
@@ -19,10 +20,16 @@ builder.Services.AddDbContext<Context>(options =>
 
 // Add services to the container.
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddScoped<ICategoriesQueries, CategoriesQueries>();
 builder.Services.AddScoped<ICategoryReadOnlyRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryWriteOnlyRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryAppService, CategoryAppService>();
+
+builder.Services.AddScoped<IEmployeeQueries, EmployeeQueries>();
+builder.Services.AddScoped<IEmployeeReadOnlyRepository, EmployeeRepository>();
+builder.Services.AddScoped<IEmployeeWriteOnlyRepository, EmployeeRepository>();
+builder.Services.AddScoped<IEmployeeAppService, EmployeeAppService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

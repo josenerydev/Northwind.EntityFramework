@@ -76,7 +76,8 @@ namespace Northwind.Infrastructure.Configurations
                 .IsRequired();
 
             builder.Property(e => e.ManagerId)
-                .HasColumnName("mgrid");
+                .HasColumnName("mgrid")
+                .IsRequired(false);
 
             builder.HasOne(e => e.Manager)
                 .WithMany(m => m.Subordinates)
