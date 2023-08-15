@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-using Northwind.Application.Dtos;
+using Northwind.Application.Production;
 using Northwind.Application.Queries;
 using Northwind.Application.Services;
 
@@ -20,7 +20,7 @@ namespace Northwind.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(CategoryDto category)
+        public async Task<IActionResult> Add(CreateCategoryDto category)
         {
             var createdCategory = await _categoryAppService.Add(category);
             return CreatedAtRoute("GetCategory", new { id = createdCategory.Id }, createdCategory);
@@ -44,7 +44,7 @@ namespace Northwind.WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, CategoryDto category)
+        public async Task<IActionResult> Update(int id, UpdateCategoryDto category)
         {
             if (await _categoryAppService.Get(id) == null)
             {

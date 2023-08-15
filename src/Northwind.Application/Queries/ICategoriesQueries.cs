@@ -1,9 +1,9 @@
-﻿using Northwind.Application.Dtos;
+﻿using Northwind.Application.Production;
 
 namespace Northwind.Application.Queries
 {
     public interface ICategoriesQueries
     {
-        Task<List<CategoryDto>> GetCategories();
+        Task<List<CategoryDetailsDto>> GetCategories();
     }
 }

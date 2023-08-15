@@ -1,14 +1,14 @@
-﻿using Northwind.Application.Dtos;
+﻿using Northwind.Application.Production;
 
 namespace Northwind.Application.Services
 {
     public interface ICategoryAppService
     {
-        Task<CategoryDto> Add(CategoryDto category);
+        Task<CategoryDetailsDto> Add(CreateCategoryDto category);
 
-        Task<CategoryDto> Get(int id);
+        Task<CategoryDetailsDto> Get(int id);
 
-        Task Update(CategoryDto category);
+        Task Update(UpdateCategoryDto category);
 
         Task Remove(int id);
     }

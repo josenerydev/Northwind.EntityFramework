@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-using Northwind.Application.Dtos;
+using Northwind.Application.Production;
 using Northwind.Application.Queries;
 
 namespace Northwind.Infrastructure.Queries
@@ -14,11 +14,11 @@ namespace Northwind.Infrastructure.Queries
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<List<CategoryDto>> GetCategories()
+        public async Task<List<CategoryDetailsDto>> GetCategories()
         {
             return await _context.Categories
                 .AsNoTracking()
-                .Select(c => new CategoryDto
+                .Select(c => new CategoryDetailsDto
                 {
                     Id = c.Id,
                     CategoryName = c.CategoryName,

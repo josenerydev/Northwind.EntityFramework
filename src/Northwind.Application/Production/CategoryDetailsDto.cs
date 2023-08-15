@@ -1,6 +1,6 @@
-﻿namespace Northwind.Application.Dtos
+﻿namespace Northwind.Application.Production
 {
-    public class CategoryDto
+    public class CategoryDetailsDto
     {
         public int Id { get; set; }
         public string CategoryName { get; set; }

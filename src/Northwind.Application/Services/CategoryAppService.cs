@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-using Northwind.Application.Dtos;
+using Northwind.Application.Production;
 using Northwind.Domain.Production;
 
 namespace Northwind.Application.Services
@@ -20,17 +20,17 @@ namespace Northwind.Application.Services
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
-        public async Task<CategoryDto> Add(CategoryDto categoryDto)
+        public async Task<CategoryDetailsDto> Add(CreateCategoryDto categoryDto)
         {
             var category = _mapper.Map<Category>(categoryDto);
             await _writeOnlyRepository.Add(category);
-            return _mapper.Map<CategoryDto>(category);
+            return _mapper.Map<CategoryDetailsDto>(category);
         }
 
-        public async Task<CategoryDto> Get(int id)
+        public async Task<CategoryDetailsDto> Get(int id)
         {
             var category = await _readOnlyRepository.Get(id);
-            return _mapper.Map<CategoryDto>(category);
+            return _mapper.Map<CategoryDetailsDto>(category);
         }
 
         public async Task Remove(int id)
@@ -38,7 +38,7 @@ namespace Northwind.Application.Services
             await _writeOnlyRepository.Remove(id);
         }
 
-        public async Task Update(CategoryDto categoryDto)
+        public async Task Update(UpdateCategoryDto categoryDto)
         {
             var existingCategory = await _readOnlyRepository.Get(categoryDto.Id);
             if (existingCategory == null) throw new ArgumentException("Category not found");
